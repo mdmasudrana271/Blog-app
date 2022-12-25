@@ -1,7 +1,8 @@
+import Details from "../components/Home/Details";
+
 const { createBrowserRouter } = require("react-router-dom");
 const { default: About } = require("../components/About/About");
 const { default: Home } = require("../components/Home/Home");
-const { default: Posts } = require("../components/Posts/Posts");
 const { default: Main } = require("../Layout/Main");
 
 const router = createBrowserRouter([
@@ -18,8 +19,14 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/posts',
-                element: <Posts></Posts>
+                path: '/posts/:id',
+                element: <Details></Details>,
+                loader:({params})=> fetch(`https://dummyapi.io/data/v1/post/${params.id}`,{
+                    headers:{
+                        "app-id": '63a6c79cce8ddac557ade813'
+                    }
+                }
+                )
             },
             {
                 path: '/about',

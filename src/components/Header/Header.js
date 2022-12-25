@@ -31,22 +31,16 @@ const Header = () => {
                 <Link to="/home">Home</Link>
               </li>
               <li>
-                <Link to="/posts">Posts</Link>
-              </li>
-              <li>
                 <Link to="/about">About Us</Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <Link to='/' className="btn btn-ghost normal-case text-xl">BLOG</Link>
         </div>
         <div className="navbar-end mr-2 hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
               <Link to="/home">Home</Link>
-            </li>
-            <li>
-              <Link to="/posts">Posts</Link>
             </li>
             <li>
               <Link to="/about">About Us</Link>
